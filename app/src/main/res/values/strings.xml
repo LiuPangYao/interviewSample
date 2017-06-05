@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">interviewSample</string>
+    <string name="title_name">標題</string>
+    <string name="sub_title_name">副標題</string>
+    <string name="VERSION">版本</string>
+    <string name="SETTING">設定</string>
+    <string name="SHARE">分享</string>
 </resources>
