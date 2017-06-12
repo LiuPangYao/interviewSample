@@ -6,7 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/WHITE</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="ToolbarTextAppearanceTitle">
@@ -19,6 +21,15 @@
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:textColorSecondary">@color/WHITE</item>
+        <item name="colorControlNormal">@color/WHITE</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity" >
+        <item name="android:activityOpenEnterAnimation">@anim/up_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/up_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/down_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/down_out</item>
     </style>
 
 </resources>
