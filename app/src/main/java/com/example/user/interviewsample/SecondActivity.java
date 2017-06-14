@@ -2,9 +2,17 @@ package com.example.user.interviewsample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.OrientationHelper;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.Window;
+
+import com.example.user.interviewsample.data.DummyData;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -24,6 +32,17 @@ public class SecondActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+
+        DifferentRowAdapter adapter = new DifferentRowAdapter(DummyData.getData());
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, OrientationHelper.VERTICAL, false);
+        // GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 2);
+        // StaggeredGridLayoutManager linearLayoutManager = new StaggeredGridLayoutManager(3, OrientationHelper.VERTICAL);
+
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.setAdapter(adapter);
     }
 
     @Override
